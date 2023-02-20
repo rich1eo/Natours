@@ -664,6 +664,7 @@ ion-icon {
   background-color: #333;
   text-decoration: none;
   text-transform: uppercase;
+  display: inline-block;
   transition: all 0.3s;
 }
 .footer__link:hover, .footer__link:active {
