@@ -7,11 +7,35 @@
 }
 
 html {
-  // This defines what 1rem is
+  // This defines what 1rem is 10px
   font-size: 62.5%;
   scroll-behavior: smooth;
+
+  // width < 1200
+  @include respond(tab-land) {
+    font-size: 56.25%; // 1rem = 9px, 9/16 = 50%
+  }
+
+  // width < 900
+  @include respond(tab-port) {
+    font-size: 50%; // 1rem = 8px, 8/16=50%
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12, 12/16 = 75%
+  }
 }
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
 }
